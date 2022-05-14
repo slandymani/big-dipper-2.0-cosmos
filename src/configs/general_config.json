@@ -1,10 +1,10 @@
 {
   "maintainer": {
-    "name": "Forbole",
-    "url": "https://forbole.com"
+    "name": "Slandyman",
+    "url": "https://github.com/slandymani"
   },
   "github": {
-    "reportIssue": "https://github.com/forbole/big-dipper-2.0-cosmos/issues"
+    "reportIssue": "https://github.com/slandymani/big-dipper-2.0-cosmos/issues"
   },
   "version": "base-v2.1.0"
 }

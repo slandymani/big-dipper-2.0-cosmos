@@ -17,31 +17,31 @@ export const useHero = () => {
     setState((prevState) => R.mergeDeepLeft(stateChange, prevState));
   };
 
-  useTokenPriceHistoryQuery({
-    variables: {
-      limit: 10,
-      denom: chainConfig?.tokenUnits[chainConfig.primaryTokenUnit]?.display,
-    },
-    onCompleted: (data) => {
-      const newState: any = {
-        loading: false,
-      };
-      if (data.tokenPrice.length === 10) {
-        newState.tokenPriceHistory = data.tokenPrice.reverse().map((x) => {
-          return ({
-            time: x.timestamp,
-            value: x.price,
-          });
-        });
-      }
-      handleSetState(newState);
-    },
-    onError: (() => {
-      handleSetState({
-        loading: false,
-      });
-    }),
-  });
+  //useTokenPriceHistoryQuery({
+  //  variables: {
+  //    limit: 10,
+  //    denom: chainConfig?.tokenUnits[chainConfig.primaryTokenUnit]?.display,
+  //  },
+  //  onCompleted: (data) => {
+  //    const newState: any = {
+  //      loading: false,
+  //    };
+  //    if (data.tokenPrice.length === 10) {
+  //      newState.tokenPriceHistory = data.tokenPrice.reverse().map((x) => {
+  //        return ({
+  //          time: x.timestamp,
+  //          value: x.price,
+  //        });
+  //      });
+  //    }
+  //    handleSetState(newState);
+  //  },
+  //  onError: (() => {
+  //    handleSetState({
+  //      loading: false,
+  //    });
+  //  }),
+  //});
 
   return {
     state,

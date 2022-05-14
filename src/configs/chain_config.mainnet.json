@@ -1,28 +1,28 @@
 {
-  "title": "Band Protocol Block Explorer",
-  "network": "laozi-mainnet",
-  "icon": "/images/icon.svg",
+  "title": "ODIN Block Explorer",
+  "network": "odin-mainnet-freya",
+  "icon": "https://raw.githubusercontent.com/slandymani/big-dipper-2.0-cosmos/chains/band/odin_logo_white.png?sanitize=true",
   "logo": {
-    "default": "/images/logo.svg"
+    "default": "https://raw.githubusercontent.com/slandymani/big-dipper-2.0-cosmos/chains/band/odin_logo_white.png?sanitize=true"
   },
   "prefix": {
-    "consensus": "bandvalcons",
-    "validator": "bandvaloper",
-    "account": "band"
+    "consensus": "odinvalcons",
+    "validator": "odinvaloper",
+    "account": "odin"
   },
   "genesis": {
-    "time": "2021-07-13T08:00:00",
-    "height": 1
+    "time": "2022-01-19T17:00:00",
+    "height": 360309
   },
-  "primaryTokenUnit": "uband",
-  "votingPowerTokenUnit": "uband",
+  "primaryTokenUnit": "loki",
+  "votingPowerTokenUnit": "loki",
   "tokenUnits": {
-    "uband": {
-      "display": "band",
+    "loki": {
+      "display": "odin",
       "exponent": 6
     }
   },
   "extra": {
-    "profile": true
+    "profile": false
   }
 }

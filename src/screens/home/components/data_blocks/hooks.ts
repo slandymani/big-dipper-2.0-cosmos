@@ -63,24 +63,24 @@ export const useDataBlocks = () => {
   // ====================================
   // token price
   // ====================================
-  useTokenPriceListenerSubscription({
-    variables: {
-      denom: chainConfig?.tokenUnits[chainConfig.primaryTokenUnit]?.display,
-    },
-    onSubscriptionData: (data) => {
-      setState((prevState) => ({
-        ...prevState,
-        price: formatTokenPrice(data.subscriptionData.data),
-      }));
-    },
-  });
+  //useTokenPriceListenerSubscription({
+  //  variables: {
+  //    denom: chainConfig?.tokenUnits[chainConfig.primaryTokenUnit]?.display,
+  //  },
+  //  onSubscriptionData: (data) => {
+  //    setState((prevState) => ({
+  //      ...prevState,
+  //      price: formatTokenPrice(data.subscriptionData.data),
+  //    }));
+  //  },
+  //});
 
-  const formatTokenPrice = (data: TokenPriceListenerSubscription) => {
-    if (data?.tokenPrice[0]?.price) {
-      return numeral(numeral(data?.tokenPrice[0]?.price).format('0.[00]', Math.floor)).value();
-    }
-    return state.price;
-  };
+  //const formatTokenPrice = (data: TokenPriceListenerSubscription) => {
+  //  if (data?.tokenPrice[0]?.price) {
+  //    return numeral(numeral(data?.tokenPrice[0]?.price).format('0.[00]', Math.floor)).value();
+  //  }
+  //  return state.price;
+  //};
 
   // ====================================
   // validators

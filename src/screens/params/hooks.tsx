@@ -167,9 +167,9 @@ export const useParams = () => {
     // oracle
     // ================================
     const formatOracle = () => {
-      if (data.oracleParams.length) {
+       if (data.oracleParams.length) {
         return OracleParams.fromJson(R.pathOr({}, ['oracleParams', 0, 'params'], data));
-      }
+       }
 
       return null;
     };

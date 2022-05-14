@@ -1,24 +1,24 @@
 {
-  "title": "Desmos Block Explorer",
-  "network": "morpheus-apollo-2",
-  "icon": "https://raw.githubusercontent.com/forbole/big-dipper-assets/master/desmos/icon.svg?sanitize=true",
+  "title": "ODIN Block Explorer",
+  "network": "odin-testnet-havi-1",
+  "icon": "https://raw.githubusercontent.com/slandymani/big-dipper-2.0-cosmos/chains/band/odin_logo_white.png?sanitize=true",
   "logo": {
-    "default": "https://raw.githubusercontent.com/forbole/big-dipper-assets/master/desmos/logo.svg?sanitize=true"
+    "default": "https://raw.githubusercontent.com/slandymani/big-dipper-2.0-cosmos/chains/band/odin_logo_white.png?sanitize=true"
   },
   "prefix": {
-    "consensus": "desmosvalcons",
-    "validator": "desmosvaloper",
-    "account": "desmos"
+    "consensus": "odinvalcons",
+    "validator": "odinvaloper",
+    "account": "odin"
   },
   "genesis": {
-    "time": "2021-07-13T08:00:00",
+    "time": "2021-12-09T12:00:00",
     "height": 1
   },
-  "primaryTokenUnit": "udaric",
-  "votingPowerTokenUnit": "udaric",
+  "primaryTokenUnit": "loki",
+  "votingPowerTokenUnit": "loki",
   "tokenUnits": {
-    "udaric": {
-      "display": "daric",
+    "loki": {
+      "display": "odin",
       "exponent": 6
     }
   },
