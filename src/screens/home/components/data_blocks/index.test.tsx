@@ -10,7 +10,7 @@ import {
 import {
   LatestBlockHeightListenerDocument,
   AverageBlockTimeDocument,
-  TokenPriceListenerDocument,
+  // TokenPriceListenerDocument,
   ActiveValidatorCountDocument,
 } from '@graphql/types';
 import DataBlocks from '.';
@@ -87,10 +87,10 @@ describe('screen: Home/DataBlocks', () => {
       () => mockSubscription,
     );
 
-    mockClient.setRequestHandler(
-      TokenPriceListenerDocument,
-      () => mockSubscriptionTwo,
-    );
+    // mockClient.setRequestHandler(
+    //  TokenPriceListenerDocument,
+    //  () => mockSubscriptionTwo,
+    // );
 
     mockClient.setRequestHandler(
       AverageBlockTimeDocument,

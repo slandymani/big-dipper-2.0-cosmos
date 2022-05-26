@@ -1,8 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { MockTheme } from '@tests/utils';
-import { MsgCreateDataSource } from '@models';
-import CreateDataSource from '.';
+import { MsgEditDataSource } from '@models';
+import EditDataSource from '.';
 
 // ==================================
 // mocks
@@ -14,16 +14,16 @@ jest.mock('@components', () => ({
 // ==================================
 // unit tests
 // ==================================
-describe('screen: TransactionDetails/CreateDataSource', () => {
+describe('screen: TransactionDetails/EditDataSource', () => {
   it('matches snapshot', () => {
-    const message = new MsgCreateDataSource({
-      type: 'MsgCreateDataSource',
+    const message = new MsgEditDataSource({
+      type: 'MsgEditDataSource',
       name: 'name',
       sender: 'name',
     });
     const component = renderer.create(
       <MockTheme>
-        <CreateDataSource
+        <EditDataSource
           message={message}
         />
       </MockTheme>,

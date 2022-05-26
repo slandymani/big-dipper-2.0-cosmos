@@ -39,10 +39,10 @@ export const useMarketRecoil = () => {
       communityPool, price, marketCap,
     } = market;
 
-    if (data?.tokenPrice?.length) {
-      price = numeral(numeral(data?.tokenPrice[0]?.price).format('0.[00]', Math.floor)).value();
-      marketCap = data.tokenPrice[0]?.marketCap;
-    }
+    // if (data?.tokenPrice?.length) {
+    //  price = numeral(numeral(data?.tokenPrice[0]?.price).format('0.[00]', Math.floor)).value();
+    //  marketCap = data.tokenPrice[0]?.marketCap;
+    // }
 
     const [communityPoolCoin] = R.pathOr([], ['communityPool', 0, 'coins'], data).filter((x) => x.denom === chainConfig.primaryTokenUnit);
     const inflation = R.pathOr(0, ['inflation', 0, 'value'], data);

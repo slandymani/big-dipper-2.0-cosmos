@@ -5,8 +5,8 @@ import {
   useLatestBlockHeightListenerSubscription,
   useAverageBlockTimeQuery,
   AverageBlockTimeQuery,
-  useTokenPriceListenerSubscription,
-  TokenPriceListenerSubscription,
+  // useTokenPriceListenerSubscription,
+  // TokenPriceListenerSubscription,
   useActiveValidatorCountQuery,
   ActiveValidatorCountQuery,
 } from '@graphql/types';

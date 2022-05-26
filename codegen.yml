@@ -9,7 +9,7 @@ generates:
       - './src/**/*_actions.ts'
       - './src/**/*_documents.ts'
       - '!./src/**/desmos_profile.graphql'
-    schema: http://161.35.90.130:8080/v1/graphql
+    schema: http://34.136.91.215:8080/v1/graphql
     plugins:
       - "typescript"
       - "typescript-operations"
