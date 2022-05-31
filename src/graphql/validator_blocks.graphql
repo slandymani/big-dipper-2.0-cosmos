@@ -2,5 +2,10 @@ query ValidatorBlocks {
   validator_blocks {
     operator_address
     proposed_blocks
+    consensus_address
+  }
+  validator_voting_power {
+    validator_address
+    voting_power
   }
 }
