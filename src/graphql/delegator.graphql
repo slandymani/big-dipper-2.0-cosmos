@@ -1,0 +1,7 @@
+query Delegator($address: String) {
+  delegator(where: {address: {_eq: $address}}) {
+    address
+    delegations
+    delegations_percentage
+  }
+}
