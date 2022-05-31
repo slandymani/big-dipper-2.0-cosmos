@@ -1,0 +1,6 @@
+query ValidatorBlocks {
+  validator_blocks {
+    operator_address
+    proposed_blocks
+  }
+}
