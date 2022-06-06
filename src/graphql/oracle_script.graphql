@@ -1,0 +1,29 @@
+query OracleScripts($limit: Int, $offset: Int, $order_by: [oracle_script_order_by!]) {
+  oracle_script(limit: $limit, offset: $offset, order_by: $order_by) {
+    id
+    name
+    owner
+    description
+    schema
+    source_code_url
+    create_block
+    edit_block
+    sender
+    timestamp
+  }
+}
+
+query OracleScriptByOwner($limit: Int, $offset: Int, $order_by: [oracle_script_order_by!], $owner: String) {
+  oracle_script(limit: $limit, offset: $offset, order_by: $order_by, where: {owner: {_eq: $owner}}) {
+    id
+    name
+    owner
+    description
+    schema
+    source_code_url
+    create_block
+    edit_block
+    sender
+    timestamp
+  }
+}

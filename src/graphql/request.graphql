@@ -1,0 +1,17 @@
+query Requests($limit: Int, $offset: Int, $order_by: [request_order_by!]) {
+  request(limit: $limit, offset: $offset, order_by: $order_by) {
+    id
+    oracle_script_id
+    sender
+    ask_count
+    min_count
+    calldata
+    client_id
+    prepare_gas
+    execute_gas
+    fee_limit
+    reports_count
+    report_timestamp
+    timestamp
+  }
+}

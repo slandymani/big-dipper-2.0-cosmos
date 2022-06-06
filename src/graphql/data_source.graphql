@@ -1,0 +1,29 @@
+query DataSources($limit: Int, $offset: Int, $order_by: [data_source_order_by!]) {
+  data_source(limit: $limit, offset: $offset, order_by: $order_by) {
+    id
+    name
+    owner
+    description
+    fee
+    executable
+    create_block
+    edit_block
+    sender
+    timestamp
+  }
+}
+
+query DataSourceByOwner($limit: Int, $offset: Int, $order_by: [data_source_order_by!], $owner: String) {
+  data_source(limit: $limit, offset: $offset, order_by: $order_by, where: {owner: {_eq: $owner}}) {
+    id
+    name
+    owner
+    description
+    fee
+    executable
+    create_block
+    edit_block
+    sender
+    timestamp
+  }
+}
