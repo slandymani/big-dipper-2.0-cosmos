@@ -27,3 +27,9 @@ query DataSourceByOwner($limit: Int, $offset: Int, $order_by: [data_source_order
     timestamp
   }
 }
+
+query DataSourceCode($id: Int) {
+  data_source(where: {id: {_eq: $id}}) {
+    executable
+  }
+}
