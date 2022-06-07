@@ -1,0 +1,7 @@
+query ValidatorReports($limit: Int, $offset: Int, $validator: String) {
+  report(limit: $limit, offset: $offset, order_by: {id: desc}, where: {validator: {_eq: $validator}}) {
+    id
+    oracle_script
+    tx_hash
+  }
+}
