@@ -23,3 +23,10 @@ query Transactions($limit: Int = 7, $offset: Int = 0) {
     logs
   }
 }
+
+query TxsPerDays($limit: Int) {
+  txs_per_date(limit: $limit, order_by: {date: desc}) {
+    date
+    txs_number
+  }
+}
