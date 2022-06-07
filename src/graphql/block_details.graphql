@@ -10,6 +10,7 @@ query BlockDetails($height: bigint, $signatureHeight: bigint) {
     height
     hash
     timestamp
+    size
     txs: num_txs
     validator {
       validatorInfo: validator_info {
