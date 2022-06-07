@@ -1,0 +1,6 @@
+query AverageBlockSize($limit: Int) {
+  average_block_size(limit: $limit, order_by: {date: desc}) {
+    date
+    average_size
+  }
+}
