@@ -12,3 +12,10 @@ query Proposals ($limit: Int = 7, $offset: Int = 0) {
   }
 }
 
+query CountProposalsByStatus {
+  proposal_aggregate(where: {status: {_eq: "PROPOSAL_STATUS_PASSED"}}) {
+    aggregate {
+      count
+    }
+  }
+}
