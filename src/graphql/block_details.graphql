@@ -33,3 +33,11 @@ query BlockDetails($height: bigint, $signatureHeight: bigint) {
       }
   }
 }
+
+query LastBlocksTxNumbers($limit: Int, $offset: Int) {
+  block(limit: $limit, offset: $offset, order_by: {height: desc}) {
+    size
+    timestamp
+    num_txs
+  }
+}
