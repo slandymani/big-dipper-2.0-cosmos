@@ -35,3 +35,10 @@ query OracleScriptRequests($script_id: Int, $limit: Int, $offset: Int) {
     }
   }
 }
+
+query RequestsPerDate($limit: Int, $offset: Int) {
+  requests_per_date(limit: $limit, offset: $offset, order_by: {date: desc}) {
+    date
+    requests_number
+  }
+}
