@@ -44,3 +44,16 @@ query CountProposalsByStatus {
     }
   }
 }
+
+query ProposalsList($limit: Int, $offset: Int, $order_by: [proposal_order_by!]) {
+  proposals: proposal(limit: $limit, offset: $offset, order_by: $order_by) {
+    title
+    proposer_address
+    status
+  }
+  total: proposal_aggregate {
+    aggregate {
+      count
+    }
+  }
+}
