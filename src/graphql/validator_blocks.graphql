@@ -1,0 +1,14 @@
+query ValidatorBlocks
+(
+  $blocks_offset: Int, $blocks_limit: Int,
+  $power_offset: Int, $power_limit: Int
+) {
+  validator_blocks(offset: $blocks_offset, limit: $blocks_limit, order_by: {proposed_blocks: desc}) {
+    operator_address
+    proposed_blocks
+  }
+  validator_voting_power(offset: $power_offset, limit: $power_limit, order_by: {voting_power: desc}) {
+    voting_power
+    validator_address
+  }
+}
