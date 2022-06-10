@@ -1,0 +1,7 @@
+query AccountBalances($limit: Int, $offset: Int, $order_by: [account_balance_order_by!]) {
+  account_balance(limit: $limit, offset: $offset, order_by: $order_by) {
+    address
+    loki_balance
+    minigeo_balance
+  }
+}
