@@ -23,3 +23,11 @@ query Transactions($limit: Int = 7, $offset: Int = 0) {
     logs
   }
 }
+
+query ValidatorTransactions($validator: String) {
+  txs: block(where: {proposer_address: {_eq: $validator}, num_txs: {_gt: 0}}) {
+    transactions {
+      hash
+    }
+  }
+}
