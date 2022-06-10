@@ -24,6 +24,13 @@ query Transactions($limit: Int = 7, $offset: Int = 0) {
   }
 }
 
+query TxsPerDays($limit: Int) {
+  txs_per_date(limit: $limit, order_by: {date: desc}) {
+    date
+    txs_number
+  }
+}
+
 query ValidatorTransactions($validator: String) {
   txs: block(where: {proposer_address: {_eq: $validator}, num_txs: {_gt: 0}}) {
     transactions {

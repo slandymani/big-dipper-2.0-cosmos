@@ -10,6 +10,7 @@ query BlockDetails($height: bigint, $signatureHeight: bigint) {
     height
     hash
     timestamp
+    size
     txs: num_txs
     validator {
       validatorInfo: validator_info {
@@ -30,5 +31,13 @@ query BlockDetails($height: bigint, $signatureHeight: bigint) {
           operatorAddress: operator_address
         }
       }
+  }
+}
+
+query LastBlocksTxNumbers($limit: Int, $offset: Int) {
+  block(limit: $limit, offset: $offset, order_by: {height: desc}) {
+    size
+    timestamp
+    num_txs
   }
 }

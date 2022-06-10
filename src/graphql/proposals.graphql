@@ -12,3 +12,48 @@ query Proposals ($limit: Int = 7, $offset: Int = 0) {
   }
 }
 
+query CountProposalsByStatus {
+  passed: proposal_aggregate(where: {status: {_eq: "PROPOSAL_STATUS_PASSED"}}) {
+    aggregate {
+      count
+    }
+  }
+  failed: proposal_aggregate(where: {status: {_eq: "PROPOSAL_STATUS_FAILED"}}) {
+    aggregate {
+      count
+    }
+  }
+  rejected: proposal_aggregate(where: {status: {_eq: "PROPOSAL_STATUS_REJECTED"}}) {
+    aggregate {
+      count
+    }
+  }
+  deposit_period: proposal_aggregate(where: {status: {_eq: "PROPOSAL_STATUS_DEPOSIT_PERIOD"}}) {
+    aggregate {
+      count
+    }
+  }
+  voting_period: proposal_aggregate(where: {status: {_eq: "PROPOSAL_STATUS_VOTING_PERIOD"}}) {
+    aggregate {
+      count
+    }
+  }
+  unspecified: proposal_aggregate(where: {status: {_eq: "PROPOSAL_STATUS_UNSPECIFIED"}}) {
+    aggregate {
+      count
+    }
+  }
+}
+
+query ProposalsList($limit: Int, $offset: Int, $order_by: [proposal_order_by!]) {
+  proposals: proposal(limit: $limit, offset: $offset, order_by: $order_by) {
+    title
+    proposer_address
+    status
+  }
+  total: proposal_aggregate {
+    aggregate {
+      count
+    }
+  }
+}

@@ -9,3 +9,10 @@ query LatestBlockTimestamp($offset: Int = 0) {
     timestamp
   }
 }
+
+query AverageBlockTimes($limit: Int) {
+  average_block_time(limit: $limit, order_by: {date: desc}) {
+    date
+    average_time
+  }
+}
