@@ -20,6 +20,7 @@ query OracleScriptRequests($script_id: Int, $limit: Int, $offset: Int) {
   oracle_script(where: {id: {_eq: $script_id}}) {
     requests(where: {oracle_script_id: {_eq: $script_id}}, limit: $limit, offset: $offset) {
       id
+      height
       oracle_script_id
       sender
       ask_count
