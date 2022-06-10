@@ -30,3 +30,11 @@ query TxsPerDays($limit: Int) {
     txs_number
   }
 }
+
+query ValidatorTransactions($validator: String) {
+  txs: block(where: {proposer_address: {_eq: $validator}, num_txs: {_gt: 0}}) {
+    transactions {
+      hash
+    }
+  }
+}

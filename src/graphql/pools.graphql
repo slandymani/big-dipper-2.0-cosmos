@@ -1,0 +1,11 @@
+query Pools {
+  treasury_pool {
+    coins
+  }
+  community_pool {
+    coins
+  }
+  data_providers_pool {
+    coins
+  }
+}
