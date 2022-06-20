@@ -38,3 +38,26 @@ query ValidatorTransactions($validator: String) {
     }
   }
 }
+
+query AccountTxs($sender: String, $limit: Int, $offset: Int, $order_by: order_by) {
+  transaction(limit: $limit, offset: $offset, where: {sender: {_eq: $sender}}, order_by: {height: $order_by}) {
+    height
+    hash
+    fee
+    gas_used
+    gas_wanted
+    logs
+    memo
+    messages
+    raw_log
+    sender
+    signatures
+    signer_infos
+    success
+  }
+  transaction_aggregate(where: {sender: {_eq: $sender}}) {
+    aggregate {
+      count
+    }
+  }
+}
